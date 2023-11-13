@@ -16,6 +16,7 @@ const greetPerson = (person) => {
 greetPerson(me); // passed in the proper formatted interface
 import { Invoice } from './classes/invoice.js'; // MUST IMPORT FROM JS FILE 
 import { Payment } from './classes/payment.js';
+import { ListTemplate } from './classes/ListTemplate.js';
 // let docOne: HasFormatter;
 // let docTwo: HasFormatter;
 // docOne = new Invoice('yoshi', 'web work', 250);
@@ -35,6 +36,9 @@ import { Payment } from './classes/payment.js';
 // invoices.forEach(inv => {
 //   console.log(inv.client, inv.amount, inv.format());
 // });
+// list template instance
+const ul = document.querySelector('ul');
+const list = new ListTemplate(ul);
 const form = document.querySelector(".new-item-form");
 console.log("HTML FORM: ", form.children);
 // inputs using #id
@@ -51,7 +55,7 @@ form.addEventListener('submit', (e) => {
     else {
         doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
     }
-    console.log('doc HasFormatter: ', doc);
+    list.render(doc, type.value, 'end');
     // console.log(
     //   type.value,
     //   tofrom.value,

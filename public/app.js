@@ -74,15 +74,41 @@ const addUID = (obj) => {
 let docOne = addUID({ name: 'yoshi', age: 58 });
 // let docTwo = addUID('hello')
 console.log(docOne.age);
-;
-const docThree = {
-    uid: 1,
-    resourceName: 'person',
-    data: { name: 'ryan' }
-};
-const docFour = {
-    uid: 2,
-    resourceName: 'shoppingList',
-    data: ['bread', 'milk', 'toilet roll']
-};
-console.log(docThree, docFour);
+// with interfaces
+// generics to help type flexibility to whatever isnt given a type
+// using <T>, you must pass an argument, or error will shows
+// interface Resource<T> { 
+//   uid: number;
+//   resourceName: string;
+//   data: T;
+// };
+// const docThree: Resource<object> = {
+//   uid: 1,
+//   resourceName: 'person',
+//   data: { name: 'ryan' }
+// };
+// const docFour: Resource<string[]> = {
+//   uid: 2,
+//   resourceName: 'shoppingList',
+//   data: ['bread', 'milk', 'toilet roll']
+// };
+// console.log(docThree, docFour)
+// ENUMS
+// allows us to store a set of constants or keywords and associate them with a numeric value
+// a constant represented by number 1
+// enum ResourceType { BOOK, AUTHOR, FILM, DIRECTOR, PERSON }
+// interface Resource<T> {
+//   uid: number;
+//   resourceType: ResourceType;
+//   data: T;
+// }
+// const docHunnid: Resource<object> = {
+//   uid: 1,
+//   resourceType: ResourceType.BOOK,
+//   data: { title: 'name of the wind' }
+// };
+// const docTwoHunnid: Resource<object> = {
+//   uid: 10,
+//   resourceType: ResourceType.PERSON,
+//   data: { name: 'yoshi' }
+// };

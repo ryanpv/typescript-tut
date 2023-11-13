@@ -8,15 +8,19 @@
 // const form = document.querySelector('form')!;
 // if multiple forms, can use class instead
 // type casting necessary because class/id can be attached to any element
-const form = document.querySelector(".new-item-form");
-console.log("HTML FORM: ", form.children);
-// inputs using #id
-const type = document.querySelector('#type');
-const tofrom = document.querySelector('#tofrom');
-const details = document.querySelector('#details');
-const amount = document.querySelector('#amount');
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber // "valueAsNumber" to tell typescript you want a number instead of string
-    );
-});
+// const form = document.querySelector(".new-item-form") as HTMLFormElement;
+// console.log("HTML FORM: ", form.children);
+// // inputs using #id
+// const type = document.querySelector('#type') as HTMLSelectElement;
+// const tofrom = document.querySelector('#tofrom') as HTMLInputElement;
+// const details = document.querySelector('#details') as HTMLInputElement;
+// const amount = document.querySelector('#amount') as HTMLInputElement;
+// form.addEventListener('submit', (e: Event) => {
+//   e.preventDefault();
+//   console.log(
+//     type.value,
+//     tofrom.value,
+//     details.value,
+//     amount.valueAsNumber // "valueAsNumber" to tell typescript you want a number instead of string
+//   )
+// });

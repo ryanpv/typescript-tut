@@ -150,3 +150,19 @@ console.log(docOne.age);
 //   resourceType: ResourceType.PERSON,
 //   data: { name: 'yoshi' }
 // };
+
+// TUPLES - a bit like arrays
+// once
+
+let arr = ['ryu', 25, true];
+arr[0] = false;
+arr[1] = 'yoshi';
+arr = [30, false, 'yoshi']
+
+// once a position has been defined with their type, it cannot be changed
+let tup: [string, number, boolean] = ['ryu', 25, true];
+// tup[0] = 25
+tup[0] = 'ken'
+
+let student: [string, number];
+student = ['chun-li', 43262];

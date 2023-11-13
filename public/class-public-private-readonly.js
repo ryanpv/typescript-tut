@@ -5,7 +5,7 @@ class Invoice {
     // readonly client: string; // readable, but cant be modified
     // private details: string; // "private access modifier", wont be able to access it from outside from the class
     // amount: number; 
-    // cleaner way to assign properties and types, but MUST have modifiers
+    // cleaner way to assign properties and types, but MUST have modifier keywards
     constructor(client, details, amount) {
         this.client = client;
         this.details = details;
